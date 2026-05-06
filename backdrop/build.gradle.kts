@@ -85,10 +85,10 @@ kotlin {
 }
 
 mavenPublishing {
-    publishToMavenCentral()
+    publishToMavenCentral(automaticRelease = true)
     signAllPublications()
 
-    coordinates("zone.ien.backdrop", "backdrop", "2.0.0-alpha05")
+    coordinates("zone.ien.backdrop", "backdrop", "2.0.0-alpha06")
 //    coordinates("io.github.kyant0", "backdrop", "2.0.0-alpha04")
 
     pom {
