@@ -1,3 +1,7 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -38,7 +42,7 @@ kotlin {
                 implementation(libs.compose.ui)
                 implementation(libs.compose.ui.graphics)
                 implementation(libs.kyant.shapes)
-                implementation("org.jetbrains:annotations:26.0.2-1")
+                implementation(libs.annotations)
             }
         }
 
@@ -84,13 +88,15 @@ mavenPublishing {
     publishToMavenCentral()
     signAllPublications()
 
-    coordinates("io.github.kyant0", "backdrop", "2.0.0-alpha04")
+    coordinates("zone.ien.backdrop", "backdrop", "2.0.0-alpha05")
+//    coordinates("io.github.kyant0", "backdrop", "2.0.0-alpha04")
 
     pom {
         name.set("Backdrop")
         description.set("Compose Multiplatform Liquid Glass effects")
         inceptionYear.set("2025")
-        url.set("https://github.com/Kyant0/AndroidLiquidGlass")
+        url.set("https://github.com/ienground/AndroidLiquidGlass")
+//        url.set("https://github.com/Kyant0/AndroidLiquidGlass")
         licenses {
             license {
                 name.set("The Apache License, Version 2.0")
@@ -100,15 +106,21 @@ mavenPublishing {
         }
         developers {
             developer {
-                id.set("Kyant0")
-                name.set("Kyant")
-                url.set("https://github.com/Kyant0")
+                id.set("ienground")
+                name.set("IENGROUND")
+                url.set("https://github.com/ienground")
+//                id.set("Kyant0")
+//                name.set("Kyant")
+//                url.set("https://github.com/Kyant0")
             }
         }
         scm {
-            url.set("https://github.com/Kyant0/AndroidLiquidGlass")
-            connection.set("scm:git:git://github.com/Kyant0/AndroidLiquidGlass.git")
-            developerConnection.set("scm:git:ssh://git@github.com/Kyant0/AndroidLiquidGlass.git")
+            url.set("https://github.com/ienground/AndroidLiquidGlass")
+            connection.set("scm:git:git://github.com/ienground/AndroidLiquidGlass.git")
+            developerConnection.set("scm:git:ssh://git@github.com/ienground/AndroidLiquidGlass.git")
+//            url.set("https://github.com/Kyant0/AndroidLiquidGlass")
+//            connection.set("scm:git:git://github.com/Kyant0/AndroidLiquidGlass.git")
+//            developerConnection.set("scm:git:ssh://git@github.com/Kyant0/AndroidLiquidGlass.git")
         }
     }
 }

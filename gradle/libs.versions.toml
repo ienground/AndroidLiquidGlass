@@ -1,21 +1,24 @@
 [versions]
 agp = "9.0.0"
-kotlin = "2.3.10"
+kotlin = "2.3.21"
 
-activity = "1.12.4"
-core = "1.17.0"
-compose = "1.10.1"
+activity = "1.13.0"
+core = "1.18.0"
+compose = "1.11.0-rc01"
 kyantShapes = "1.2.0"
+annotations = "26.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity" }
+annotations = { module = "org.jetbrains:annotations", version.ref = "annotations" }
 compose-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
 compose-foundation = { group = "org.jetbrains.compose.foundation", name = "foundation", version.ref = "compose" }
 compose-ui = { group = "org.jetbrains.compose.ui", name = "ui", version.ref = "compose" }
 compose-ui-graphics = { group = "org.jetbrains.compose.ui", name = "ui-graphics", version.ref = "compose" }
 compose-material-ripple = { group = "org.jetbrains.compose.material", name = "material-ripple", version.ref = "compose" }
-kyant-shapes = { group = "io.github.kyant0", name = "shapes", version.ref = "kyantShapes" }
+kyant-shapes = { group = "zone.ien.shapes", name = "shapes", version.ref = "kyantShapes" }
+#kyant-shapes = { group = "io.github.kyant0", name = "shapes", version.ref = "kyantShapes" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
