@@ -7,3 +7,13 @@ plugins {
     alias(libs.plugins.jetbrains.compose) apply false
     id("com.vanniktech.maven.publish") version "0.36.0" apply false
 }
+
+val localProperties = java.util.Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.inputStream().use { localProperties.load(it) }
+    localProperties.forEach { key, value ->
+        extra.set(key as String, value)
+    }
+}
+
